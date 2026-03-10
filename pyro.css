@@ -1,0 +1,31 @@
+body {
+    background: url('http://www.resim.link/serve_image.php?img=uploads/697a1f9a0875b_pyro_top15.jpg') #000 fixed center;
+    background-size: cover;
+    color: #ddd;
+    font-family: Tahoma, Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+}
+table {
+    width: 100%;
+    text-align: center;
+    background: rgba(0,0,0,0.85);
+    border: 1px solid #e6a33a;
+    padding: 10px;
+    border-radius: 5px;
+    border-collapse: collapse;
+    margin: 0 auto;
+    max-width: 800px;
+}
+h2 { color: #e6a33a; text-align: center; margin: 10px 0; text-shadow: 1px 1px 2px #000;}
+th { color: #e6a33a; padding: 5px; border-bottom: 2px solid #e6a33a; }
+td { padding: 4px; border-bottom: 1px solid #333; }
+tr:nth-child(even) { background: rgba(255,255,255,0.05); }
+
+/* Renkler ve Nick Sola Yaslama */
+.p { color: #4caf50; font-weight: bold; }
+.n { color: #f44336; font-weight: bold; }
+td:nth-child(2) { text-align: left; font-weight: bold; color: #fff; }
+.g { color: #00FF00; }
+.r { color: #FF0000; }
+table { width: 100%; }
