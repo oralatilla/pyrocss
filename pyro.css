@@ -1,3 +1,4 @@
+/* Genel Sayfa Yapısı */
 body {
     background: url('http://www.resim.link/serve_image.php?img=uploads/697a1f9a0875b_pyro_top15.jpg') #000 fixed center;
     background-size: cover;
@@ -7,61 +8,82 @@ body {
     padding: 10px;
 }
 
-h2 { 
-    color: #e6a33a; 
+/* Başlıklar: Gölge (text-shadow) ile her zeminde okunabilir hale getirildi */
+h2, h3 { 
     text-align: center; 
-    margin: 0 0 10px 0; 
-    text-shadow: 1px 1px 2px #000;
-    font-size: 24px;
+    margin: 10px 0; 
+    /* Yazının etrafına 4 yönden siyah katman atarak beyaz yazıyı belirginleştirir */
+    text-shadow: 2px 2px 4px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
+h2 { 
+    color: #e6a33a; 
+    font-size: 26px; 
+    text-transform: uppercase;
+}
+
+h3 { 
+    color: #fff; 
+    font-size: 18px;
+    font-weight: normal;
+}
+
+/* Tablo Tasarımı */
 table {
     width: 100%;
     text-align: center;
-    background: rgba(0,0,0,0.85);
+    background: rgba(0,0,0,0.85); /* Şeffaf siyah arka plan */
     padding: 10px;
     border-radius: 5px;
     border-collapse: collapse;
     margin: 0 auto;
     max-width: 800px;
-    border: none; /* Tablonun komple dış çerçevesini kapattık */
+    border: none;
 }
 
-/* Sadece Üst Menüye (Başlıklara) Çerçeve Ekliyoruz */
+/* Sadece Üst Menü Çerçevesi */
 th { 
     color: #e6a33a; 
-    padding: 5px; 
-    border-top: 1px solid #e6a33a;    /* Üst menünün üst çizgisi */
-    border-bottom: 2px solid #e6a33a; /* Üst menünün alt kalın çizgisi */
+    padding: 8px; 
+    border-top: 1px solid #e6a33a;
+    border-bottom: 2px solid #e6a33a;
 }
-th:first-child { border-left: 1px solid #e6a33a; }  /* Üst menü sol kenar */
-th:last-child { border-right: 1px solid #e6a33a; }  /* Üst menü sağ kenar */
+th:first-child { border-left: 1px solid #e6a33a; }
+th:last-child { border-right: 1px solid #e6a33a; }
 
-/* Oyuncuların Hücreleri (Çizgiler tamamen iptal edildi) */
+/* Oyuncu / İstatistik Satırları */
 td { 
-    padding: 4px; 
+    padding: 6px; 
     border: none; 
 }
 
-/* Oyuncuların Zeminleri (Siyahlı / Grili Geçiş) */
-tr:nth-child(even) { background: rgba(255, 255, 255, 0.05); } /* Hafif şeffaf gri zemin */
-tr:nth-child(odd) td { background: rgba(0, 0, 0, 0.3); }      /* Hafif koyu siyah zemin */
+/* "Değer" sütununu ve rakamları tam ortalayan kural */
+table th:last-child, table td:last-child {
+    text-align: center !important;
+    font-weight: bold;
+    color: #fff;
+}
 
-/* Renkler ve Nick Sola Yaslama */
+/* Nick Sütununu Sola Yasla (Top15 için) */
+td:nth-child(2) { text-align: left; font-weight: bold; color: #fff; }
+
+/* Zebra Desenli Zemin (Siyahlı-Grili) */
+tr:nth-child(even) { background: rgba(255, 255, 255, 0.05); }
+tr:nth-child(odd) td { background: rgba(0, 0, 0, 0.3); }
+
+/* Renk Sınıfları */
 .p { color: #4caf50; font-weight: bold; }
 .n { color: #f44336; font-weight: bold; }
-td:nth-child(2) { text-align: left; font-weight: bold; color: #fff; }
 .g { color: #00FF00; }
 .r { color: #FF0000; }
 
-/* İlk 3 Sıra Kupa İkonları */
+/* Kupa İkonları */
 .k1, .k2, .k3 {
     width: 20px; 
     height: 20px; 
     background-repeat: no-repeat;
     background-position: center center;
 }
-
 .k1 { background-image: url('http://i.hizliresim.com/jw0xc87.png'); }
 .k2 { background-image: url('http://i.hizliresim.com/brbgrqj.png'); }
 .k3 { background-image: url('http://i.hizliresim.com/fdk8psa.png'); }
