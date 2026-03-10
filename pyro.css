@@ -7,22 +7,45 @@ body {
     padding: 10px;
 }
 
+h2 { 
+    color: #e6a33a; 
+    text-align: center; 
+    margin: 0 0 10px 0; 
+    text-shadow: 1px 1px 2px #000;
+    font-size: 24px;
+}
+
 table {
     width: 100%;
     text-align: center;
     background: rgba(0,0,0,0.85);
-    border: 1px solid #e6a33a;
     padding: 10px;
     border-radius: 5px;
     border-collapse: collapse;
     margin: 0 auto;
     max-width: 800px;
+    border: none; /* Tablonun komple dış çerçevesini kapattık */
 }
 
-h2 { color: #e6a33a; text-align: center; margin: 10px 0; text-shadow: 1px 1px 2px #000; }
-th { color: #e6a33a; padding: 5px; border-bottom: 2px solid #e6a33a; }
-td { padding: 4px; border-bottom: 1px solid #333; }
-tr:nth-child(even) { background: rgba(255,255,255,0.05); }
+/* Sadece Üst Menüye (Başlıklara) Çerçeve Ekliyoruz */
+th { 
+    color: #e6a33a; 
+    padding: 5px; 
+    border-top: 1px solid #e6a33a;    /* Üst menünün üst çizgisi */
+    border-bottom: 2px solid #e6a33a; /* Üst menünün alt kalın çizgisi */
+}
+th:first-child { border-left: 1px solid #e6a33a; }  /* Üst menü sol kenar */
+th:last-child { border-right: 1px solid #e6a33a; }  /* Üst menü sağ kenar */
+
+/* Oyuncuların Hücreleri (Çizgiler tamamen iptal edildi) */
+td { 
+    padding: 4px; 
+    border: none; 
+}
+
+/* Oyuncuların Zeminleri (Siyahlı / Grili Geçiş) */
+tr:nth-child(even) { background: rgba(255, 255, 255, 0.05); } /* Hafif şeffaf gri zemin */
+tr:nth-child(odd) td { background: rgba(0, 0, 0, 0.3); }      /* Hafif koyu siyah zemin */
 
 /* Renkler ve Nick Sola Yaslama */
 .p { color: #4caf50; font-weight: bold; }
@@ -33,13 +56,12 @@ td:nth-child(2) { text-align: left; font-weight: bold; color: #fff; }
 
 /* İlk 3 Sıra Kupa İkonları */
 .k1, .k2, .k3 {
-    width: 16px; 
-    height: 16px; 
+    width: 20px; 
+    height: 20px; 
     background-repeat: no-repeat;
     background-position: center center;
 }
 
-/* Burada limitimiz olmadığı için güvenli olan uzun direkt linkleri kullanıyoruz */
-.k1 { background-image: url('http://tinyurl.com/4udrac4t'); }
-.k2 { background-image: url('http://tinyurl.com/hwrbnasx'); }
-.k3 { background-image: url('http://tinyurl.com/a9jb6xjn'); }
+.k1 { background-image: url('http://i.hizliresim.com/jw0xc87.png'); }
+.k2 { background-image: url('http://i.hizliresim.com/brbgrqj.png'); }
+.k3 { background-image: url('http://i.hizliresim.com/fdk8psa.png'); }
