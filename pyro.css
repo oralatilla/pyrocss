@@ -31,3 +31,14 @@ td:nth-child(2) { text-align: left; font-weight: bold; color: #fff; }
 .r { color: #FF0000; }
 
 table { width: 100%; }
+/* İlk 3 Sıra Kupa İkonları */
+.k1, .k2, .k3 {
+    width: 16px; /* Gerekirse kupa boyutuna göre bunu artırıp azaltabilirsin */
+    height: 16px; 
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.k1 { background-image: url('hhttp://tinyurl.com/4udrac4t'); }
+.k2 { background-image: url('http://tinyurl.com/hwrbnasx'); }
+.k3 { background-image: url('http://tinyurl.com/a9jb6xjn'); }
