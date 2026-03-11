@@ -10,10 +10,29 @@ body {
     flex-direction: column;
     align-items: center; 
     overflow: hidden;
+    /* TABLOYU ASAGI ALMAK ICIN PADDING DEGERINI ARTIRABILIRSIN */
+    padding-top: 75px; 
 }
 
 h2 { color: #e6a33a; font-size: 19px; text-transform: uppercase; margin: 3px 0 0 0; text-shadow: 2px 2px 4px #000; }
 h3 { color: #fff; font-size: 13px; margin: 0 0 3px 0; }
+
+/* KUPA TANIMLAMALARI VE BOYUT SABITLEME */
+.kupa1, .kupa2, .kupa3, table img {
+    width: 16px !important;
+    height: 16px !important;
+    max-width: 16px !important;
+    max-height: 16px !important;
+    /* Kupalarin 4, 5, 6 gibi ortali durmasi icin: */
+    display: inline-block !important;
+    vertical-align: middle !important;
+    margin-right: 2px;
+}
+
+/* Kupa Linkleri (Senin tanimladigin sekliyle) */
+.kupa1 { content: url('http://tinyurl.com/4udrac4t'); }
+.kupa2 { content: url('http://tinyurl.com/hwrbnasx'); }
+.kupa3 { content: url('http://tinyurl.com/a9jb6xjn'); }
 
 table {
     width: 94%;
@@ -34,51 +53,36 @@ th {
     text-align: center;
 }
 
+/* ILK SUTUN (KUPALARIN VE SAYILARIN OLDUGU YER) ORTALAMA */
+td:first-child {
+    text-align: center !important;
+    vertical-align: middle !important;
+    min-width: 50px;
+}
+
 td { 
-    padding: 4px 6px; /* Satır aralığı sığması için optimize edildi */
+    padding: 4px 6px; 
     font-size: 12px;
     vertical-align: middle;
     color: #fff;
     text-align: center;
 }
 
-/* Nick Sütunu Sola Yasla ve Hizala */
+/* Nick Sütunu */
 td:nth-child(2) { 
     text-align: left !important; 
     padding-left: 15px; 
     font-weight: bold;
 }
 
-/* NET SÜTUNU (5. Sütun) - NET PARLAK YEŞİL */
+/* NET SÜTUNU */
 td:nth-child(5) {
     color: #00FF00 !important; 
     font-weight: bold;
 }
 
-/* İSABET SÜTUNU (6. Sütun) - NORMAL BEYAZ */
+/* İSABET SÜTUNU */
 td:nth-child(6) {
     color: #fff !important;
     font-weight: normal;
 }
-
-/* 15. SATIR ALTI ZORLA KALIN ÇİZGİ */
-tr:last-child td {
-    border-bottom: 2px solid #e6a33a !important;
-}
-
-/* KUPALARI KÜÇÜLTME (13px) */
-.kupa1, .kupa2, .kupa3 {
-    display: inline-block;
-    width: 13px !important; /* Daha küçük ve kibar */
-    height: 13px !important;
-    background-size: contain;
-    background-repeat: no-repeat;
-    vertical-align: middle;
-    margin-right: 5px;
-    line-height: 1; /* Çevresindeki boşluğu sıfırlar */
-}
-.kupa1 { background-image: url('http://tinyurl.com/4udrac4t'); }
-.kupa2 { background-image: url('http://tinyurl.com/hwrbnasx'); } 
-.kupa3 { background-image: url('http://tinyurl.com/a9jb6xjn'); }
-
-tr:nth-child(even) { background: rgba(30, 30, 30, 0.6); }
