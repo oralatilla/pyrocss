@@ -1,4 +1,4 @@
-/* Pyro Top15 - Versiyon 12 */
+/* Pyro Top15 - Final Versiyon */
 body {
     background: url('http://www.resim.link/serve_image.php?img=uploads/697a1f9a0875b_pyro_top15.jpg') #000 fixed center;
     background-size: cover;
@@ -9,27 +9,27 @@ body {
     display: flex; 
     flex-direction: column;
     align-items: center; 
-    overflow: hidden;
-    /* TABLOYU ASAGI ALMAK ICIN PADDING DEGERINI ARTIRABILIRSIN */
-    padding-top: 75px; 
+    /* 15. kişinin sığması için overflow'u açtık ve padding ekledik */
+    overflow: auto;
+    padding-top: 50px; 
 }
 
 h2 { color: #e6a33a; font-size: 19px; text-transform: uppercase; margin: 3px 0 0 0; text-shadow: 2px 2px 4px #000; }
 h3 { color: #fff; font-size: 13px; margin: 0 0 3px 0; }
 
 /* KUPA TANIMLAMALARI VE BOYUT SABITLEME */
+/* Resimlerin 16x16 kalmasını zorlar, büyümesini engeller */
 .kupa1, .kupa2, .kupa3, table img {
     width: 16px !important;
     height: 16px !important;
     max-width: 16px !important;
     max-height: 16px !important;
-    /* Kupalarin 4, 5, 6 gibi ortali durmasi icin: */
     display: inline-block !important;
     vertical-align: middle !important;
     margin-right: 2px;
 }
 
-/* Kupa Linkleri (Senin tanimladigin sekliyle) */
+/* Senin tanımladığın kupa linkleri */
 .kupa1 { content: url('http://tinyurl.com/4udrac4t'); }
 .kupa2 { content: url('http://tinyurl.com/hwrbnasx'); }
 .kupa3 { content: url('http://tinyurl.com/a9jb6xjn'); }
@@ -42,26 +42,29 @@ table {
     margin: 0 auto;
     border-left: 1px solid #e6a33a;
     border-right: 1px solid #e6a33a;
+    /* Alt kısmın kesilmemesi için ufak margin */
+    margin-bottom: 20px;
 }
 
 th { 
     color: #e6a33a; 
-    padding: 8px 4px; 
+    padding: 6px 4px; 
     border-top: 1px solid #e6a33a;
     border-bottom: 2px solid #e6a33a;
     font-size: 12px;
     text-align: center;
 }
 
-/* ILK SUTUN (KUPALARIN VE SAYILARIN OLDUGU YER) ORTALAMA */
+/* 1. SÜTUN (KUPALARIN VE SAYILARIN ORTALANMASI) */
 td:first-child {
     text-align: center !important;
     vertical-align: middle !important;
-    min-width: 50px;
+    min-width: 45px;
 }
 
 td { 
-    padding: 4px 6px; 
+    /* 15 kişinin sığması için padding düşürüldü */
+    padding: 3px 6px; 
     font-size: 12px;
     vertical-align: middle;
     color: #fff;
