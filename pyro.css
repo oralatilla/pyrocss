@@ -1,39 +1,28 @@
-/* Genel Sayfa Yapısı */
+/* Pyro Top15 Genel Sayfa Yapısı */
 body {
     background: url('http://www.resim.link/serve_image.php?img=uploads/697a1f9a0875b_pyro_top15.jpg') #000 fixed center;
     background-size: cover;
     color: #ddd;
     font-family: Tahoma, Arial, sans-serif;
     margin: 0;
-    padding: 10px;
+    padding: 5px; /* Dış boşluğu azalttık */
+    overflow: hidden; /* Kaydırma çubuğunu zorla gizle */
 }
 
-/* Başlıklar: Gölge (text-shadow) ile her zeminde okunabilir hale getirildi */
 h2, h3 { 
     text-align: center; 
-    margin: 10px 0; 
-    /* Yazının etrafına 4 yönden siyah katman atarak beyaz yazıyı belirginleştirir */
-    text-shadow: 2px 2px 4px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    margin: 5px 0; 
+    text-shadow: 2px 2px 4px #000, 1px 1px 0 #000;
 }
 
-h2 { 
-    color: #e6a33a; 
-    font-size: 26px; 
-    text-transform: uppercase;
-}
-
-h3 { 
-    color: #fff; 
-    font-size: 18px;
-    font-weight: normal;
-}
+h2 { color: #e6a33a; font-size: 22px; text-transform: uppercase; }
+h3 { color: #fff; font-size: 16px; font-weight: normal; }
 
 /* Tablo Tasarımı */
 table {
-    width: 100%;
-    text-align: center;
-    background: rgba(0,0,0,0.85); /* Şeffaf siyah arka plan */
-    padding: 10px;
+    width: 95%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 5px;
     border-radius: 5px;
     border-collapse: collapse;
     margin: 0 auto;
@@ -41,49 +30,53 @@ table {
     border: none;
 }
 
-/* Sadece Üst Menü Çerçevesi */
+/* Üst Menü Çerçevesi */
 th { 
     color: #e6a33a; 
-    padding: 8px; 
+    padding: 6px; 
     border-top: 1px solid #e6a33a;
     border-bottom: 2px solid #e6a33a;
+    font-size: 14px;
 }
 th:first-child { border-left: 1px solid #e6a33a; }
 th:last-child { border-right: 1px solid #e6a33a; }
 
-/* Oyuncu / İstatistik Satırları */
+/* Satır Ayarları */
 td { 
-    padding: 6px; 
-    border: none; 
+    padding: 4px; /* 15. satırın sığması için düşürüldü */
+    border: none;
+    font-size: 13px;
+    vertical-align: middle;
 }
 
-/* "Değer" sütununu ve rakamları tam ortalayan kural */
-table th:last-child, table td:last-child {
-    text-align: center !important;
-    font-weight: bold;
-    color: #fff;
+/* ZORLA ALT ÇİZGİ: 15. Satır bittiğinde tabloyu kapatan çizgi */
+tr:last-child td {
+    border-bottom: 2px solid #e6a33a !important;
 }
+tr:last-child td:first-child { border-left: 1px solid #e6a33a; }
+tr:last-child td:last-child { border-right: 1px solid #e6a33a; }
 
-/* Nick Sütununu Sola Yasla (Top15 için) */
+/* Sütun Hizalamaları */
+tfoot td, thead th { text-align: center; }
 td:nth-child(2) { text-align: left; font-weight: bold; color: #fff; }
+table td:last-child { text-align: center !important; font-weight: bold; color: #fff; }
 
-/* Zebra Desenli Zemin (Siyahlı-Grili) */
-tr:nth-child(even) { background: rgba(255, 255, 255, 0.05); }
-tr:nth-child(odd) td { background: rgba(0, 0, 0, 0.3); }
+/* Zebra Desen */
+tr:nth-child(even) { background: rgba(30, 30, 30, 0.6); }
+tr:hover { background: rgba(230, 163, 58, 0.2); }
 
-/* Renk Sınıfları */
-.p { color: #4caf50; font-weight: bold; }
-.n { color: #f44336; font-weight: bold; }
-.g { color: #00FF00; }
-.r { color: #FF0000; }
-
-/* Kupa İkonları */
-.k1, .k2, .k3 {
-    width: 20px; 
-    height: 20px; 
+/* KUPA TANIMLAMALARI (CSS üzerinden resim çağırma) */
+.kupa1, .kupa2, .kupa3 {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: center center;
+    vertical-align: middle;
+    margin-right: 5px;
 }
-.k1 { background-image: url('http://i.hizliresim.com/jw0xc87.png'); }
-.k2 { background-image: url('http://i.hizliresim.com/brbgrqj.png'); }
-.k3 { background-image: url('http://i.hizliresim.com/fdk8psa.png'); }
+
+/* Gümüş Kupa ve diğerleri */
+.kupa1 { background-image: url('http://tinyurl.com/4udrac4t'); } /* Altın */
+.kupa2 { background-image: url('http://tinyurl.com/hwrbnasx'); } /* Gümüş */
+.kupa3 { background-image: url('http://tinyurl.com/a9jb6xjn'); } /* Bronz */
