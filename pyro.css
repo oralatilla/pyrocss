@@ -1,30 +1,24 @@
-/* Pyro Top15 - Tam Optimize Edilmiş CSS */
+/* Pyro Top15 - Final Refined Design */
 body {
     background: url('http://www.resim.link/serve_image.php?img=uploads/697a1f9a0875b_pyro_top15.jpg') #000 fixed center;
     background-size: cover;
     color: #ddd;
     font-family: Tahoma, Arial, sans-serif;
     margin: 0;
-    padding: 2px;
+    padding: 0;
     overflow: hidden;
 }
 
-h2, h3 { 
-    text-align: center; 
-    margin: 2px 0; 
-    text-shadow: 2px 2px 4px #000;
-}
+/* Başlık alanlarını daraltarak tabloya yer açıyoruz */
+h2 { color: #e6a33a; font-size: 20px; text-transform: uppercase; text-align: center; margin: 2px 0; text-shadow: 2px 2px 4px #000; }
+h3 { color: #fff; font-size: 14px; text-align: center; margin: 0 0 5px 0; }
 
-h2 { color: #e6a33a; font-size: 20px; text-transform: uppercase; }
-h3 { color: #fff; font-size: 14px; }
-
-/* Tablo Ana Yapısı ve Yan Çizgiler */
+/* Tablo Yapısı ve Yan Çizgiler */
 table {
-    width: 98%;
+    width: 95%;
     background: rgba(0, 0, 0, 0.85);
     border-collapse: collapse;
     margin: 0 auto;
-    /* Yan çizgileri zorla ekliyoruz */
     border-left: 1px solid #e6a33a;
     border-right: 1px solid #e6a33a;
 }
@@ -32,7 +26,7 @@ table {
 /* Üst Menü (Header) */
 th { 
     color: #e6a33a; 
-    padding: 5px; 
+    padding: 10px 5px; /* Menü başlıkları biraz daha ferah */
     border-top: 1px solid #e6a33a;
     border-bottom: 2px solid #e6a33a;
     font-size: 13px;
@@ -41,50 +35,51 @@ th {
 
 /* Hücre Ayarları */
 td { 
-    padding: 3px 5px; /* Sığması için daraltıldı */
+    padding: 5px 8px; /* Padding artırıldı, sıkışıklık giderildi */
     border: none;
     font-size: 12px;
     vertical-align: middle;
     color: #fff;
 }
 
-/* Nick Sütunu Sola Hizala */
+/* Nick Sütunu Sola Yasla ve Başlığa Hizala */
 td:nth-child(2) { 
     text-align: left !important; 
-    font-weight: bold; 
+    padding-left: 15px; /* Menüdeki "Nick" yazısının altına tam otursun diye */
 }
 
-/* Rank ve Değer Sütunlarını Ortala */
-td:first-child, td:last-child { 
+/* Ortalanacak Sütunlar (Rank vb.) */
+td:first-child, td:nth-child(3), td:nth-child(4) { 
     text-align: center; 
 }
 
-/* İstatistik (Yeşil Yazı) Kısmı */
+/* TAM NET YEŞİL YAZI (İstatistikler) */
 td:last-child {
-    color: #00FF00 !important; /* Net Yeşil */
-    font-family: 'Courier New', monospace;
+    color: #00FF00 !important; /* Saf Yeşil */
+    text-align: center !important;
     font-weight: bold;
+    text-shadow: 1px 1px 2px #000;
 }
 
-/* EN ALT ÇİZGİ: 15. Satırın Altını Kapatır */
+/* 15. SATIRIN ALTINI KAPATAN ZORUNLU ALT ÇİZGİ */
 tr:last-child td {
     border-bottom: 2px solid #e6a33a !important;
 }
 
-/* Zebra Görünümü */
-tr:nth-child(even) { background: rgba(40, 40, 40, 0.5); }
-tr:hover { background: rgba(230, 163, 58, 0.2); }
-
-/* Kupa Görselleri */
+/* Kupa Sınıfları - Boyutlar Küçültüldü */
 .kupa1, .kupa2, .kupa3 {
     display: inline-block;
-    width: 16px;
-    height: 16px;
+    width: 14px;  /* Kupalar küçültüldü */
+    height: 14px;
     background-size: contain;
     background-repeat: no-repeat;
     vertical-align: middle;
-    margin-right: 4px;
+    margin-right: 5px;
 }
 .kupa1 { background-image: url('http://tinyurl.com/4udrac4t'); }
 .kupa2 { background-image: url('http://tinyurl.com/hwrbnasx'); }
 .kupa3 { background-image: url('http://tinyurl.com/a9jb6xjn'); }
+
+/* Zebra Renklendirme */
+tr:nth-child(even) { background: rgba(30, 30, 30, 0.6); }
+tr:hover { background: rgba(230, 163, 58, 0.2); }
