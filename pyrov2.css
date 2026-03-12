@@ -1,0 +1,89 @@
+/* Pyro Top15 - Final Temiz ve Profesyonel Versiyon */
+body {
+    background: url('http://www.resim.link/serve_image.php?img=uploads/697a1f9a0875b_pyro_top15.jpg') #000 fixed center;
+    background-size: cover;
+    color: #ddd;
+    font-family: Tahoma, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    overflow: auto;
+    padding-top: 40px; 
+}
+
+h2, h3 { 
+    color: #e6a33a; 
+    text-align: center;
+    margin: 5px 0;
+    text-shadow: 1px 1px 2px #000;
+}
+
+h2 { font-size: 19px; text-transform: uppercase; }
+h3 { font-size: 14px; margin-bottom: 10px; color: #fff; }
+
+table {
+    width: 94%;
+    max-width: 780px;
+    background: rgba(0, 0, 0, 0.85);
+    border-collapse: collapse;
+    margin: 0 auto 20px auto;
+    /* Tabloyu komple saran net bir dış çerçeve */
+    border: 1px solid #e6a33a; 
+}
+
+th { 
+    color: #e6a33a; 
+    padding: 8px 5px; 
+    border-bottom: 2px solid #e6a33a;
+    font-size: 13px;
+    text-align: center;
+    background: rgba(230, 163, 58, 0.1);
+}
+
+td { 
+    /* 15 kişinin kaydırma çubuğu çıkmadan rahat sığması için dikey boşluk (padding) optimize edildi */
+    padding: 4px 6px; 
+    font-size: 12px;
+    vertical-align: middle;
+    color: #fff;
+    text-align: center;
+    /* Satır arası ince, şık ayraçlar */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+}
+
+/* ALT ÇİZGİ KAPATMA SORUNUNUN KESİN ÇÖZÜMÜ */
+/* En son satırın alt çizgisini siliyoruz ki tablonun ana çerçevesiyle üst üste binip kalınlaşmasın */
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* 1. Sütun (Sıra No) */
+td:first-child {
+    color: #e6a33a;
+    font-weight: bold;
+    width: 30px;
+}
+
+/* 2. Sütun (Nick) - Hem başlık hem satır sola dayalı */
+td:nth-child(2), th:nth-child(2) { 
+    text-align: left !important; 
+    padding-left: 15px; 
+}
+
+td:nth-child(2) {
+    font-weight: bold;
+    width: 40%;
+}
+
+/* Net Sütunu Renklendirmeleri (SMA'daki g, r, w sınıfları için) */
+.g { color: #00FF00 !important; font-weight: bold; }
+.r { color: #FF4444 !important; font-weight: bold; }
+.w { color: #FFFFFF !important; }
+
+/* Kupa class'larını tamamen işlevsiz bırakıyoruz */
+.kupa1, .kupa2, .kupa3 {
+    content: none !important;
+    background: none !important;
+}
