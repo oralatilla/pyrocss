@@ -22,6 +22,11 @@ body.bg1 {
     background-size: cover;
 }
 
+body.bg2 {
+    background: url('https://r.resimlink.com/VuSvlRxO.jpg') #000 fixed center;
+    background-size: cover;
+}
+
 h2, h3 { 
     color: #e6a33a; 
     text-align: center;
