@@ -11,19 +11,18 @@ body {
     padding-top: 40px; 
 }
 
-/* Rastgele çağıracağımız arka plan sınıfları */
 body.bg0 {
-    background: url('https://resim.link//serve_image.php?img=uploads%2F69b2bf901d5d4_resim1.jpg') #000 fixed center;
+    background: url('https://resim.link//serve_image.php?img=uploads%2F69b2bf901d5d4_resim1.jpg') #000 fixed top;
     background-size: cover;
 }
 
 body.bg1 {
-    background: url('https://resim.link//serve_image.php?img=uploads%2F69b2bf91a775e_resim2.jpg') #000 fixed center;
+    background: url('https://resim.link//serve_image.php?img=uploads%2F69b2bf91a775e_resim2.jpg') #000 fixed top;
     background-size: cover;
 }
 
 body.bg2 {
-    background: url('https://cdn.jsdelivr.net/gh/oralatilla/pyrocss@main/VuSvlRxO.jpg') #000 fixed center;
+    background: url('https://cdn.jsdelivr.net/gh/oralatilla/pyrocss@main/VuSvlRxO.jpg') #000 fixed top;
     background-size: cover;
 }
 
